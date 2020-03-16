@@ -6,7 +6,7 @@
     packages:
     - gcc
     - epel-release
-    - python37-devel
+    - python3-devel
     - sqlite-devel
     - openssl-devel
     - bzip2-devel
