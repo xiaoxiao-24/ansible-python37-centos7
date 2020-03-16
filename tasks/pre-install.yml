@@ -5,7 +5,17 @@
   vars:
     packages:
     - gcc
+    - epel-release
+    - python37-devel
+    - sqlite-devel
     - openssl-devel
     - bzip2-devel
     - libffi-devel
   become: yes
+
+- name: Install pip
+  yum:
+    name: python-pip
+
+- name: Update pip and setuptools
+  shell: "pip install --upgrade pip && pip install --upgrade setuptools"
